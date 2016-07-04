@@ -83,18 +83,19 @@ public class NewTest {
         	     Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         	     Connection conn = DriverManager.getConnection(url, userName, password);
         	     Statement sta =  conn.createStatement();
-        	     String Sql = "select * from Books.[dbo].[InternetMarketing]";
+        	     String Sql = "Select * from [dbo].[FlagFootballForum]";
+        	     
         	     ResultSet rs = sta.executeQuery(Sql);
         	     while (rs.next()) {
         	   
         	    	 System.out.println(rs.getString(1));
         	   
-        	    final String fromEmail = "HealthyandWellnessProducts"; //requires valid gmail id
-               final String pwd = "HealthyandWellnessProducts123"; // correct password for gmail id
+        	    final String fromEmail = "andoh.samuel@gmail.com"; //requires valid gmail id
+               final String pwd = "ska123456"; // correct password for gmail id
               
     		// final String toEmail = (keyword); // thats to excel sheet email
                //final String toEmail = (rs.getString(1));// thats to database Email
-               final String toEmail = ("kwesi.andoh2007@gmail.com");
+               final String toEmail = ("sammy27gh@yahoo.com");
                System.out.println("TLSEmail Start");
                Properties props = new Properties();
                props.put("mail.smtp.host", "smtp.gmail.com"); //SMTP Host
@@ -102,22 +103,24 @@ public class NewTest {
                props.put("mail.smtp.auth", "true"); //enable authentication
                props.put("mail.smtp.starttls.enable", "true"); //enable STARTTLS
                String subject = "Congratulation on being on our list  ";
-               String body = " <h3 >Dear Customer ,<br><br> We are in the business of finding  consumers such as you "
-               		+ "great Deals on goods and services.<br> Over the years we have succeeded to reducing consumers"
-               		+ "expense on everyday purchases and suggesting services that will be cheaper.<br>"
-               		+ " We send out a lot cheap but quality products to you at an affordable "
-               		+ "price. We do the thorough work of comparing prices before making suggesting where to buy these. "
-               		+ "<br>You are not required by us to do anything but to be directed to places where you can save money. "
-               		+ "which is on the Major Websites with Money back Gurantees. "
+               String body = " <h2 >Hello Ebay Customer,<"
+            		   +"<br>"
+            		   
+               		+ "Do you want to resell this car thats on ebay.. "
                		+ "<br>"
-               		+ "With that said this is one of the product we have found on belows link ...</h3><br><br><br> "
-               		+ "<h1><a href=\"http://www.anrdoezrs.net/click-8037253-12543778-1459288583000\">Find Airport Parking Rates for your Upcoming Travel </a><h1> "
-               		+ "<br><br><br>"
-               		+ "<h3>Thank You <br>"
-               		+ "Samuel Andoh<br>"
-               		+ "Marketing Manager <br>"
+               		+ "Do u want to bid on this amazing car having 30+ bids already"
+               		+ "<br>"
+               		+ "Dont waste anymore time. Just follow the link to this amazing deals thats ending soon. "
+                    
+               		+ "<br>"
+               		+ "Below is the Link to the Amazing 2005  honda Civic  on Ebay....</h3><br><br><br> "
+               		+ "<h1><a href="
+                    + "http://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_ff3=2&pub=5575085158&toolid=10001&campid=5337846953&customid=&icep_item=191908006294&ipn=psmain&icep_vectorid=229466&kwid=902099&mtid=824&kw=lg71&ipn=psmain&icep_vectorid=229466&kwid=902099&mtid=824&kw=lg\">2005 Honda Civic </a><h1> "
+                    + "Also checkout the amazing 2007 honda Civic on Ebay. </h3><br><br><br> "
+                     + "<h1><a href="
+                    + "http://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_ff3=2&pub=5575085158&toolid=10001&campid=5337846953&customid=&icep_item=311645977143&ipn=psmain&icep_vectorid=229466&kwid=902099&mtid=824&kw=lg\">2007 Honda Civic </a><h1> "
 
-               		+ "</h3>";// Email body goes Here 
+               		+ "</h2>";// Email body goes Here 
                 
                
                

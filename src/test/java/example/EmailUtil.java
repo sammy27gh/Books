@@ -38,11 +38,11 @@ public static void sendAttachmentEmail(Session session, String toEmail, String s
          msg.addHeader("Content-type", "text/HTML; charset=UTF-8");
          msg.addHeader("format", "flowed");
          msg.addHeader("Content-Transfer-Encoding", "8bit");
-         String subjectList = "Airport Parking Rates  ";
+         String subjectList = " Buy and Resell this Ebay car Bidding Ending Soon.  ";
          
-         msg.setFrom(new InternetAddress("HealthyandWellnessProducts", subjectList));
+         msg.setFrom(new InternetAddress("samuel.andoh@waldenu.edu", subjectList));
  
-         msg.setReplyTo(InternetAddress.parse("HealthyandWellnessProducts", false));
+         msg.setReplyTo(InternetAddress.parse("samuel.andoh@waldenu.edu", false));
  
          msg.setSubject(subject, "UTF-8");
  
@@ -64,7 +64,7 @@ public static void sendAttachmentEmail(Session session, String toEmail, String s
  
          // Second part is attachment
          messageBodyPart = new MimeBodyPart();
-         String filename = "src/test/java/example/airport.jpg";
+         String filename = "src/test/java/example/civic.jpg";
          
          DataSource source = new FileDataSource(filename);
          messageBodyPart.setDataHandler(new DataHandler(source));
